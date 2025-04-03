@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--CSS작성영역-->
+    <style>
+        table,
+        th,
+        td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <!--테이블은 현 위치에서 행이나 열 요소가 늘어난다.(방향:왼쪽에서 오른쪽으로, 위에서 아래로)-->
+    <!--병합한 만큼 현 위치가 이동함-->
+    <!--병합된걸 무시하고 최대한 쪼개서 생각-->
+    <!--테이블 만들는 법: 1. 하나의 tr과 안에 열 개수만큼 th만들기 2.그 후로 tr열고 열 개수만큼 td넣기 -->
+    <table>
+        <!--tr 태그 한개가 하나의 행-->
+        <tr>
+            <th>번호</th>   <!--th, td 태그 한개가 하나의 열-->
+            <th>상품명</th>
+            <th>수량</th>
+            <th>가격</th>
+        </tr>
+        <tr>
+            <td>1</td>          <!--td 태그 한개가 하나의 데이터-->
+            <td>콜라</td>
+            <td>1개</td>
+            <td>1,500원</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>사이다</td>
+            <td>2개</td>
+            <td rowspan="2">1,000원</td>        <!--행병합-->
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>탄산수</td>
+            <td>3개</td>
+            <!-- <td>1,000원</td> -->
+        </tr>
+        <tr>
+            <td>총 금액</td>
+            <td colspan="3">6,500원</td>        <!--열병합-->
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table>
+        <!--tr 태그 한개가 하나의 행-->
+        <thead>
+            <tr>
+                <th scope="col">번호</th>   <!--th, td 태그 한개가 하나의 열-->
+                <th scope="col">상품명</th>
+                <th scope="col">수량</th>
+                <th scope="col">가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>          <!--td 태그 한개가 하나의 데이터-->
+                <td>콜라</td>
+                <td>1개</td>
+                <td>1,500원</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>사이다</td>
+                <td>2개</td>
+                <td rowspan="2">1,000원</td>        <!--행병합-->
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>탄산수</td>
+                <td>3개</td>
+                <!-- <td>1,000원</td> -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>총 금액</td>
+                <td colspan="3">6,500원</td>        <!--열병합-->
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
