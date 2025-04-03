@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--1.체크/라디오가 아닌 텍스트 인풋일때 라벨에다가 for속성 줘야하는지? 
+        2.라벨말고 span줘도 되는지?-->   <!--1번:맘대로 선택/2번 span도 가능-->
+    <!--3.select에선 placeholder 불가능한지?-->
+    <form>
+        <lable for="username">고객명: </lable>
+        <input type="text" id="username" name="userName">
+        <br>
+        <lable for="usertel">전화번호: </lable>
+        <input type="tel" id="usertel" name="userTel">
+        <br>
+        <lable for="useremail">E-mail: </lable>
+        <input type="email" id="useremail" name="useremail">
+        <br>
+        <label for="usersel">피자선택:</label>
+        <select>
+            <option disabled selected>피자를 선택하세요</option>
+            <option>치즈</option>
+            <option>페페로니</option>
+            <option>콤비네이션</option>
+        </select>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <input type="radio" name="pizzaSize"><label>Small</label><br>
+            <input type="radio" name="pizzaSize"><label>Medium</label><br>
+            <input type="radio" name="pizzaSize"><label>Large</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <input type="checkbox" name="pizzaOpt"><label>베이컨</label><br>
+            <input type="checkbox" name="pizzaOpt"><label>치즈</label><br>
+            <input type="checkbox" name="pizzaOpt"><label>양파</label><br>
+            <input type="checkbox" name="pizzaOpt"><label>버섯</label>
+        </fieldset>
+        <label for="usertime">희망배송시간: </label>
+        <input type="time" id="usertime" name="userTime">
+        <br><br>
+        <label for="usercmt">배송시 요청사항: </label>
+        <textarea id="usercmt"></textarea>
+        <br><br>
+        <button type="submit">주문하기</button>
+    </form>
+</body>
+</html>
