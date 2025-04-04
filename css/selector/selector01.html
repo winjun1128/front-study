@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*태그 선택자가 전제 선택자보다 우선순위가 높다*/
+         /*태그 선택자*/
+         h2{
+            color:blue;
+        }
+
+        /*전체 선택자*/
+        *{
+            color:red;
+        }
+        /*아이디 선택자*/
+        #select-id{
+            color:green;
+        }
+        /*클래스 선택자*/
+        .select-class{
+            color:black;
+        }
+
+        /*속성 선택자*/
+        [target="_blank"]{
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <!-- id는 요소 하나에 하나의 아이디만/클래스는 요소 여러개에  -->
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3 id="select-id">h3</h3>
+    <h4 class="select-class">h4</h4>
+    <h5>h5</h5>
+
+    <p>p 하나</p>
+    <p class="select-class">p 둘</p>
+    <p>p 셋</p>
+    <p>p 넷</p>
+
+    <a href="htttps://www.naver.com" target="_blank">네이버로 이동</a>
+    <a href="htttps://www.google.com" target="_self">구글로 이동</a>
+
+
+</body>
+</html>
