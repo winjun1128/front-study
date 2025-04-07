@@ -7,18 +7,18 @@
 
     <style>
         /*구조적 가상 클래스 선택자*/
-        p:first-child{color:red;}
+        /* p:first-child{color:red;}            첫 번째 자식이 p태그인지? */
 
         p:last-child{color:blue;}
 
         /* p:nth-child(3){color: green;} */
-/        
-        /* p:nth-of-type(3){color: green;}             p:처음 p가  1부터 시작 */
+
+        /* p:nth-of-type(3){color: green;}              */
         /*
          짝수: even 2n
          홀수: odd 2n + 1
-         */
-         p:nth-of-type(even){color: green}
+        */
+        p:nth-of-type(2n+1){color: green}           /*n은 0부터*/
     </style>
 </head>
 <body>
