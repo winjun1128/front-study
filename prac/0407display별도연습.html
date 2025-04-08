@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--원래 흐름: 이동시키기전의 위치-->
+    <!--div 영역을 잡더라도 블록이라 가로는 잡히나 세로는 0이므로 설정해주기-->
+    <!--div에 내용물을 넣으면 세로가 잡히지만 안 넣으면 설정해주기-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 기본세팅 */
+       *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .button{
+            /* 위치 조정하기 위해 relative로 */
+            position: relative;                             
+            left: 200px;                                /* 왼쪽에서 200px 띄우기 */
+            background-color: gray;
+        }
+        .board{                                           
+            background-color: blue;
+            height: 800px;                              /* 보드에 세로 설정되어 보여짐 */
+        }
+        .button:hover ~ .continue .category {
+            position: absolute;                         /* relative해도 동일 */
+            width: 100px;                               
+            height: 800px;                              /* 카테고리에 세로 설정되어 보여짐 */
+            background-color: red;
+            z-index: 1;                                 /* 앞으로 보내기 */
+        }
+        .continue{
+            /* 흐름과 상관없이 위치 시키기 위해 absolute로(원래 흐름:보드 밑에) */
+            position: absolute;                         
+            top: 100px;                                 /* 위, 왼쪽 100px, 200px 띄우기 */
+            left: 200px;
+        }
+        .ex{
+            height: 400px;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <!--div 만들어지는 순서: 1.버튼,2.보드,3.카테고리,4,ex-->
+    <!--순서대로 div의 공간이 만들어짐-->
+    <!--div 공간에 box와 버튼 설정 적용-->
+    <div class=" box button">아무거나</div>
+    <!--원래흐름대로 위치(버튼을 이동시키기 전의 원래 위치 밑에)-->
+    <div class="board"></div>
+    <!--continue시작을 absolute로 버튼 밑으로 설정-->
+    <!--기본셋팅을 안하면 브라우저 마진을 8이 되어 있어서 시작좌표가 x:(버튼bottom_left_x)-8,y:(버튼bottom_left_y)-8-->
+    <div class="continue">
+        <!--버튼에 마우스 올렸을때 같은레벨인 컨티뉴의 카테고리-->                      
+        <div class="category"></div>
+    </div>
+    <!--시작위치가 continue가 끝난-->
+    <div class="ex"></div>
+</body>
+</html>

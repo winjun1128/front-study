@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+           /* 기본세팅 */
+       *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .back-lightgray{background-color: lightgray;}
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        /*case1 각자 relative*/
+        /* .container{
+            width: 500px;
+            height: 300px;
+            border: 5px solid black;
+
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+        .red-box{
+            background-color: red;
+            position: relative;
+            left: 55px;
+            top: -245px;
+        }
+        .green-box{
+            background-color: green;
+            position: relative;
+            left: 105px;
+            top: -295px;
+            z-index: 10;
+        }
+        .yellow-box{
+            background-color: yellow;
+            position: relative;
+            left: 55px;
+            top: -345px;
+        } */
+        /*case2 fixed*/
+        /*
+        .container{
+            width: 500px;
+            height: 300px;
+            border: 5px solid black;
+            /*마진*/
+            /* margin: 50px;
+            margin-bottom: 0;
+            margin-left: 50px;
+            margin-top: 50px; */
+            
+            /*마진 아닐때*/
+        /*
+            position: relative;
+            left: 50px;
+            top: 50px;
+        }
+        .red-box{
+            background-color: red;
+            position: fixed;
+            left: 55px;
+            top: 105px;
+        }
+        .green-box{
+            background-color: green;
+            position: fixed;
+            left: 105px;
+            top: 155px;
+            z-index: 10;
+        }
+        .yellow-box{
+            background-color: yellow;
+            position: fixed;
+            left: 55px;
+            top: 205px;
+        }
+        */
+        /*case3 컨테이너 안 박스들 */
+        /* .container{
+            width: 500px;
+            height: 300px;
+            border: 5px solid black;
+            margin: 50px;
+            margin-bottom: 0;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        .red-box{
+            background-color: red;
+        }
+        .green-box{
+            background-color: green;
+            position:relative; 
+            top:-50px;
+            left: 50px;
+            z-index: 10;
+        }
+        .yellow-box{
+            background-color: yellow;
+            position: relative;
+            top: -100px;
+        } */
+        /*case 3-2 박스 순서*/
+        /* .container{
+            width: 500px;
+            height: 300px;
+            border: 5px solid black;
+            margin: 50px;
+            margin-bottom: 0;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        .red-box{
+            background-color: red;
+        }
+        .green-box{
+            background-color: green;
+            position:relative; 
+            top:-150px;
+            left: 50px;
+            z-index: 10;
+        }
+        .yellow-box{
+            background-color: yellow;
+        } */
+         /*case 4 absolute*/
+        .container{
+            width: 500px;
+            height: 300px;
+            border: 5px solid black;
+            margin: 50px;
+            margin-bottom: 0;
+            margin-left: 50px;
+            margin-top: 50px;
+            position: relative;
+        }
+        .red-box{
+            background-color: red;
+        }
+        .green-box{
+            background-color: green;
+            position:absolute; 
+            top:50px;
+            left: 50px;
+        }
+        .yellow-box{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-lightgray">
+        <h3>배경색이 lightgray</h3>
+        <h3>h3글자</h3>
+        <!-- <p>다른텍스트</p> -->
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum in, error molestias similique excepturi ipsam, consectetur voluptas nesciunt perspiciatis fugiat sint! Nam enim corporis iusto quo voluptate sit eveniet quas?</p> -->
+    </div>
+    <!--case 1,2-->
+    <!-- <div class="container"></div>
+
+    <div class="box red-box">A</div>
+    <div class="box green-box">B</div>
+    <div class="box yellow-box">C</div> -->
+
+    <!--case 3-1 컨테이너에 박스들 -->
+    <!-- <div class="container">
+        <div class="box red-box">A</div>
+        <div class="box green-box">B</div>
+        <div class="box yellow-box">C</div>
+    </div> -->
+    <!--case 3-2 박스 순서만-->
+    <!-- <div class="container">
+        <div class="box red-box">A</div>
+        <div class="box yellow-box">C</div>
+        <div class="box green-box">B</div>
+    </div>
+    <dib class="box">
+        다음에 추가할 내용
+    </dib> -->
+
+    <!--case 4 absolute-->
+    <div class="container">
+        <div class="box red-box">A</div>
+        <div class="box green-box">B</div>
+        <div class="box yellow-box">C</div>
+    </div>
+    <!-- <dib class="box">
+        다음에 추가할 내용
+    </dib> -->
+
+</body>
+</html>
