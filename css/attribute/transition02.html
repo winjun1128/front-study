@@ -33,14 +33,18 @@
             /* display: none; */
             opacity: 0;
 
-            transition-property: all;
-            transition-duration: 2s;
+            /* transition-property: all;
+            transition-duration: 2s; */
         }
 
         .menu:hover .sub-menu {
             /* display: block; */
             /* height: 210px; */
             opacity: 1;
+
+            /* 메뉴에서 마우스뗴면 서브메뉴 바로 꺼짐 */
+            transition-property: all;
+            transition-duration: 2s;
         }
 
         .sub-menu-item {
