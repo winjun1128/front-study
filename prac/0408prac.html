@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .big {
+            position: relative;
+            top: 50px;
+            width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .red{
+            background-color: red;
+            width: 50%;
+            height: 100px;
+            float: left;
+        }
+        .green{
+            background-color: green;
+            width: 50%;
+            height: 100px;
+            float: left;
+        }
+        .text{
+            float: left;
+            width:100%;
+        }
+        .blue{
+            width: 100%;
+            background-color: blue;
+            height: 200px;
+            float: left;
+        }
+         /* float 해제 시키기 그럼 자식 영역이 생겨서 container 영역도 잡힘 */
+         /* float 요소를 출력 다하고 알아서 해제 시킴 */
+         .big::after {             
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="red"></div>
+        <div class="green"></div>
+        <p class="text">글자가운데정렬</p>
+        <div class="blue"></div>
+    </div>
+</body>
+</html>
