@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes box1ani{
+            0%{
+                background-color: blue;
+            }
+            25%{
+                left: 100px;
+                background-color: orange;
+            }
+            50%{
+                left: 200px;
+                background-color: pink;
+            }
+            75%{
+                left: 100px;
+                background-color: orange;
+            }
+            100%{
+                background-color: blue;
+            }
+        }
+        @keyframes box2ani{
+            0%{
+                background-color: blue;
+            }
+            25%{
+                top: 100px;
+                background-color: orange;
+            }
+            50%{
+                top: 200px;
+                background-color: pink;
+            }
+            75%{
+                top: 100px;
+                background-color: orange;
+            }
+            100%{
+                background-color: blue;
+            }
+        }
+        @keyframes box3ani{
+            0%{
+                background-color: blue;
+            }
+            25%{
+                left: 100px;
+                top: 100px;
+                background-color: orange;
+            }
+            50%{
+                left: 200px;
+                top: 200px;
+                background-color: pink;
+            }
+            75%{
+                left: 100px;
+                top: 100px;
+                background-color: orange;
+            }
+            100%{
+                background-color: blue;
+            }
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+            position: relative;
+            animation-name: box1ani;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+            position: relative;
+            animation-name: box2ani;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+            position: relative;
+            animation-name: box3ani;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+        .box1:hover{
+            animation-play-state: paused;
+        }
+        .box2:hover{
+            animation-play-state: paused;
+        }
+        .box3:hover{
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>
