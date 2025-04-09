@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 600px;
+            margin: 0 auto;
+            background-color: lightblue;
+        }
+        .left{
+            width: 300px;
+            border: 2px solid black;
+            float: left;
+        }
+        .right{
+            width: 300px;
+            border: 2px solid black;
+            float: left;
+        }
+        .ocean{
+            width: 150px;
+            float: left;
+        }
+        .container::after {             
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <!--인라인 요소가 float를 감쌈-->
+            <img class="ocean"src="ocean.jpg"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, veniam cupiditate, fuga rem odit voluptatibus molestiae corrupti vero voluptatum odio necessitatibus et nisi praesentium, suscipit voluptatem cumque exercitationem omnis quia!</p>
+        </div>
+        <div class="right">
+            <img class="ocean"src="ocean.jpg"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, reprehenderit eius. Consequatur delectus hic veniam fuga sed, iste ducimus temporibus assumenda soluta rerum culpa excepturi quasi architecto facere nobis laborum!</p>
+        </div>
+    </div>
+</body>
+</html>

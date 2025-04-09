@@ -11,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        /*
         .menu {
             width: 150px;
             height: 70px;
@@ -21,26 +21,97 @@
             position: relative;
             cursor: pointer;
         }
-
+        
         .sub-menu {
             width: 100%;
             height: 210px;
-            /* height: 0px; */
+            /* height: 0px; /
             border:1px solid red;
             background-color: olive;
             position: absolute;
             top: 70px;
-            /* display: none; */
+            /* display: none; /
             opacity: 0;
+
+            /* transition-property: all;
+            transition-duration: 2s; /
+        }
+
+        .menu:hover .sub-menu {
+            /* display: block; /
+            /* height: 210px; /
+            opacity: 1;
+
+            /* 메뉴에서 마우스뗴면 서브메뉴 바로 꺼짐 /
+            transition-property: all;
+            transition-duration: 2s;
+        }
+
+        .sub-menu-item {
+            height: 70px;
+            border: 1px dashed blue;
+        }
+
+        .sub-menu-item:hover {
+            background-color: beige;
+        }
+        */
+        /* menuclass 기본설정 (블록으로 되어 있으면 메뉴클래스의 가로는 창 가로 길이) */
+        /* .menuclass{
+            display: block;
+        } */
+         /* 인라인으로 안 하면 menuclass가 메뉴와 서브메뉴가 합친 한 덩어리이기 때문에 메뉴에서 인라인해도 안 먹힘 */
+         /* 인라인으로 하면 가로길이가 menuclass안에 있는 메뉴 가로길이 */
+
+         /* 밑에 버튼 위치 문제(이전 버튼도 내려감)(조건: 서브메뉴를 위치조정 안했을때 2번째 버튼 누르기) 해설 */
+         /* 1. 메뉴와 서브메뉴를 묶은 메뉴클래스가 인라인
+            2. 인라인이라 한줄에 배치되기 위해 인라인 요소끼리 베이스라인을 맞춤
+            3. 2번째 메뉴클래스가 호버되면 서브메뉴때문에 베이스라인이 내려감
+            4. 1번째 메뉴클래스와 3번째 메뉴 클래스도 2번째의 베이스라인에 맞춤
+            -> 따라서 나머지 버튼들이 내려가서 보임
+            ※ vertical-align: baseline;
+        */
+         .menuclass{
+            display: inline-block;
+         }
+        .menu {
+            width: 150px;
+            height: 70px;
+            /* display: inline-block; */
+            /* 주석을 치면 버튼이 아래에 생김(누른 버튼의 다음 버튼들이 서브메뉴 옆에다 생기는건 이해되나 이전 버튼까지 왜 그렇게 생기는지?) */
+            /* 또 부모 속성을 상속 받는데 왜 주석차이가 생기는지?*/
+            background-color: lightgray;
+            border:1px solid black;   
+            cursor: pointer;
+        }
+
+        .sub-menu {
+            width: 150px;
+            height: 210px;
+
+            height: 0px;
+            /* 자식인 아이템이 height를 가지고 있어도 숨겨짐 */
+            overflow: hidden;
+
+            border:1px solid red;
+            background-color: olive;
+
+            /*위치 조정 안하면 위의 문제 발생(버튼 아래 생김(이전 버튼도))*/
+            position: absolute;
+            top: 70px;
+
+            /* display: none; */
+
+            /* opacity: 0; */
 
             /* transition-property: all;
             transition-duration: 2s; */
         }
 
-        .menu:hover .sub-menu {
+        .menuclass:hover .sub-menu {
             /* display: block; */
-            /* height: 210px; */
-            opacity: 1;
+            height: 210px;
+            /* opacity: 1; */
 
             /* 메뉴에서 마우스뗴면 서브메뉴 바로 꺼짐 */
             transition-property: all;
@@ -60,19 +131,40 @@
 <body>
     
     <div class="menu-bar">
-        <div class="menu">
+        
+        <!-- <div class="menu">
             <div class="sub-menu">
                 <div class="sub-menu-item"></div>
                 <div class="sub-menu-item"></div>
                 <div class="sub-menu-item"></div>
             </div>
         </div>
+
         <div class="menu">
             <div class="sub-menu"></div>
         </div>
         <div class="menu">
+            <div class="sub-menu"></div>
+        </div> -->
+        <div class="menuclass">
+            <div class="menu"></div>
+            <div class="sub-menu">
+                <div class="sub-menu-item"></div>
+                <div class="sub-menu-item"></div>
+                <div class="sub-menu-item"></div>
+            </div>
+        </div>
+        <div class="menuclass">
+            <div class="menu"></div>
+            <div class="sub-menu"></div>
+        </div>
+        <div class="menuclass">
+            <div class="menu"></div>
             <div class="sub-menu"></div>
         </div>
     </div>
+
+    <!--위와 같은 베이스라인 맞추는 상황-->
+    <span style="font-size: 5rem;">asd;fksjf;oijf</span><span>sdjfaodfidjoi</span>
 </body>
 </html>
