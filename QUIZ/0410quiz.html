@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 호버의 대상이 아닌 속성이 바뀌는 대상을 트랜지션 걸기
+            →즉 속성이 바뀌는 대상에 프로퍼티와 딜레이를 걸기 */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+          background-color: lightgray; 
+        }
+        .red{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 2px solid black;
+            transition-property: all;
+          transition-duration: 5s;
+        }
+        .blue{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 2px solid black;
+            transition-property: all;
+          transition-duration: 5s;
+        }
+        .black{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            border: 2px solid black;
+            transition-property: all;
+          transition-duration: 5s;
+        }
+        .green{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border: 2px solid black;
+            display: inline-block;
+            transition-property: all;
+          transition-duration: 5s;
+        }
+        .yellow{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 2px solid black;
+            display: inline-block;
+            transition-property: all;
+          transition-duration: 5s;
+        }
+        .container:hover .red{
+            width: 500px;
+        }
+        .container:hover .blue{
+            background-color: purple;
+        }
+        .container:hover .black{
+            transform: translateX(200px);
+        }
+        .green:hover , .yellow:hover{
+            border: 10px solid red; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="red"></div>
+        <div class="blue"></div>
+        <div class="black"></div>
+        <div class="green">
+        </div><div class="yellow"></div>
+    </div>
+</body>
+</html>

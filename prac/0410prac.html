@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            animation-name: boxani;
+            animation-duration: 5s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes boxani{
+           0%{
+            transform: rotate(0deg);
+            background-color: blue;
+           }
+           50%{
+            transform: rotate(360deg) translateX(250px);
+            background-color: orange;
+           }
+           100%{
+            transform: rotate(720deg) translateX(500px);
+            background-color: pink;
+           }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
