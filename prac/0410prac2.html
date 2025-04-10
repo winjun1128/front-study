@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .all{
+            width: 700px;
+            border: 2px solid black;
+            margin: 0 auto;
+            position: relative;
+            top: 50px;
+            color: white;
+        }
+        .A{
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+        }
+        .mainmenu{
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+        }
+        .mypage{
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+        }
+        .B{
+            display: flex;
+            height: 300px;
+        }
+        .D{
+            width: 490px;
+            background-color: orange;
+            display: flex;
+            flex-wrap: wrap;
+            /* align-items: center; */
+        }
+        .E{
+            width: 210px;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .upbox{
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+        .downbox{
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+        .box{
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            margin: 30px;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+        .box:hover{
+            width: 110px;
+            height: 75px;
+        }
+        .C{
+            height: 100px;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="A">
+            <div class="mainmenu">메인메뉴</div>
+            <div class="mypage">마이페이지</div>
+        </div>
+        <div class="B">
+            <div class="D">
+                <div class="upbox">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+                <div class="downbox">
+                    <div class="box"></div>
+                    <div class="box"></div>
+                    <div class="box"></div>
+                </div>
+            </div>
+            <div class="E">aside</div>
+        </div>
+        <div class="C">footer</div>
+    </div>
+</body>
+</html>
