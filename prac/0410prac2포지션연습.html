@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--헤더에 길이 안 줬을때 메인의 위치 -->
+    <!-- =>내부의 요소의 영역들이 헤더의 영역이 되고 그 밑에 메인이 위치-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .all{
+            width: 700px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: 2px solid black;
+        }
+        .menu{
+            width: 250px;
+            height: 100px;
+        }
+        .page{
+            width: 100px;
+            height: 100px;
+        }
+        .red{
+            background-color: red;
+        }
+
+        .main{
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <div class="menu red">메뉴</div>
+            <div class="page red">페이지</div>
+        </div>
+        <div class="main">메인</div>
+    </div>
+</body>
+</html>

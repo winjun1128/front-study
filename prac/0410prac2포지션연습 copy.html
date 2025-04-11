@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!--헤더에 길이 줬을때 메인의 위치 -->
+    <!-- => 1. 헤더에 100을 줬지만 내부 요소는 블록이라 메뉴 밑에 페이지가 생김
+        2. 하지만 헤더의 길이가 100만을 할당 받아서 그 밑으로는 메인이 생김
+        =>따라서 메인영역과 페이지영역이 겹쳐지지만 컨텐츠인 "페이지" 가 뜸
+
+        *** 즉 부모의 길이가 주어지면 내부 요소의 길이가 더 길어진다고 해도 안 늘어남!! ***
+
+        ==>"페이지"가 안 뜨기 위해서는 부모인 헤더에 오버플로: 히든을 걸기
+     -->
+    <!--
+        겹쳐진 부분이 더 크면 더 큰 부분만 표시 된다!!!
+     -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .all{
+            width: 700px;
+            height: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+            border: 2px solid black;
+        }
+        .header{
+            height: 100px;
+            /* overflow: hidden; */ /* "page"가 사라짐 */ 
+        }
+        .menu{
+            width: 250px;
+            height: 100px;
+        }
+        .page{
+            width: 100px;
+            height: 400px;
+        }
+        .red{
+            background-color: red;
+        }
+
+        .main{
+            height: 300px;
+            background-color: orange;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <div class="menu red">메뉴</div>
+            <div class="page red">페이지</div>
+        </div>
+        <div class="main">메인</div>
+    </div>
+</body>
+</html>
