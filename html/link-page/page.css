@@ -1,0 +1,28 @@
+.nav-menu{
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    display: inline-block;
+}
+.navbar ul{
+    list-style-type: none; /* ul li 태그 앞에 점 사라짐 */
+    display: flex;
+    background-color: lightgreen;
+}
+.navbar li{
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid red;
+    text-align: center;             /* 컨텐츠를 가로 방향으로 정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar li:hover{
+    background-color: lightcoral;
+}
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
