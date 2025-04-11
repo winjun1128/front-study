@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 미디어쿼리에서 각 태그의 모든 속성(레이아웃,크기)들을 지정 가능 */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /*여기서 컨테이너를 위 아래 정렬은? 컨테이너 더 만들어서 text_align 위 아래정렬인가*/
+        /* width를 %와 px로 하면 컨텐츠에서 시작하고 px은 정해진만큼 그리고 %도 정해진만큼 그리는데
+            부모를 만나면 멈춤 */
+        .container{
+            width: 800px;
+            margin: 0 auto;
+            /* overflow: hidden; */
+        }
+        .first{
+            display: flex;
+        }
+        .first_box{
+            width: 50%;
+            height: 100px;
+            background-color: yellow;
+        }
+        .first_box2{
+            width: 50%;
+            height: 100px;
+            background-color: violet;
+        }
+        .second{
+            width: 100%;
+            height: 100px;
+            background-color: purple;
+        }
+        .third{
+            width: 100%;
+            height: 200px;
+            display: flex;
+        }
+        .third_left{
+            width: 37.5%;
+            height: 200px;
+            background-color: lightblue;
+        }
+        .third_right{
+            width: 62.5%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        .third_right_box{
+            width: 100%;
+            height: 100px;
+            background-color: yellow;
+        }
+        .third_right_box2{
+            width: 100%;
+            height: 100px;
+            background-color: pink;
+        }
+        .final{
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        .final_box{
+            width: 25%;
+            background-color: yellow;
+        }
+        .final_box2{
+            width: 25%;
+            background-color: orange;
+        }
+        .final_box3{
+            width: 25%;
+            background-color: yellow;
+        }
+        .final_box4{
+            width: 25%;
+            background-color: green;
+        }
+        .border_draw{
+            border: 2px solid black;
+        }
+        @media screen and (max-width:700px){
+            .container{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:650px){
+            .final{
+                height: 200px;
+            }
+           .final_box, .final_box2, .final_box3, .final_box4{
+                width: 50%;
+           }
+           .final{
+            flex-wrap: wrap;
+           }
+        }
+        @media screen and (max-width:500px){
+            .first{
+                display: block;
+            }
+            .first_box{
+                width: 100%;
+            }
+            .first_box2{
+                width: 100%;
+            }
+            .third{
+                display: block;
+            }
+            .third_left{
+                width: 100%;
+                height: 100px;
+            }
+            .third_right{
+                width: 100%;
+                height: 100px;
+                display: flex;
+                flex-direction: row;
+            }
+            .third_right_box{
+                width: 50%;
+                height: 100%;
+            }
+            .third_right_box2{
+                width: 50%;
+                height: 100%;
+            }
+            .final{
+                height: 200px;
+            }
+           .final_box, .final_box2, .final_box3, .final_box4{
+                width: 50%;
+           }
+           .final{
+            flex-wrap: wrap;
+           }
+        }
+        @media screen and (max-width:350px){
+           .third{
+            height: 300px;
+           }
+           .third_right{
+            width: 100%;
+            height: 200px;
+            display: block;
+           }
+           .third_right_box{
+            width: 100%;
+            height: 100px;
+           }
+           .third_right_box2{
+            width: 100%;
+            height: 100px;
+           }
+           .final{
+            width: 100%;
+            height: 400px;
+            display: block;
+           }
+           .final_box{
+            width: 100%;
+            height: 100px;
+           }
+           .final_box2{
+            width: 100%;
+            height: 100px;
+           }
+           .final_box3{
+            width: 100%;
+            height: 100px;
+           }
+           .final_box4{
+            width: 100%;
+            height: 100px;
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="container border_draw">
+        <div class="first">
+            <div class="first_box border_draw"></div>
+            <div class="first_box2 border_draw"></div>
+        </div>
+        <div class="second border_draw"></div>
+        <div class="third">
+            <div class="third_left border_draw"></div>
+            <div class="third_right">
+                <div class="third_right_box border_draw"></div>
+                <div class="third_right_box2 border_draw"></div>
+            </div>
+        </div>
+        <div class="final">
+            <div class="final_box border_draw"></div>
+            <div class="final_box2 border_draw"></div>
+            <div class="final_box3 border_draw"></div>
+            <div class="final_box4 border_draw"></div>
+        </div>
+    </div>
+</body>
+</html>
