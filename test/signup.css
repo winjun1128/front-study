@@ -1,0 +1,101 @@
+.container_sign{
+    width: 500px;
+    height: 800px;
+    margin: 0 auto;
+    background-color: darkgreen;
+    padding: 20px;
+}
+.page-area_sign{
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+}
+.signup_sign{
+    width: 200px;
+    height: 100px;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.login_sign{
+    width: 200px;
+    height: 100px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.title-area_sign{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.title-area_sign > h1{
+    color:white;
+}
+.form-area_sign{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    display: block;
+}
+.email_class_sign{
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.email_class_sign > input{
+    width: 400px;
+    height: 50px;
+}
+.password_class_sign{
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.password2_class_sign{
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.password_class_sign > input{
+    width: 400px;
+    height: 50px;
+}
+.password2_class_sign > input{
+    width: 400px;
+    height: 50px;
+}
+.submit_class_sign{
+    width: 400px;
+    height: 100px;
+}
+.submit_class_sign > button{
+    width: 400px;
+    height: 100px;
+    background-color: aqua;
+    color: white;
+}
+.page-area_sign a{
+    text-decoration: none;
+}
+.email_class_sign > input{
+    background-color: darkgreen;
+}
+.password_class_sign > input{
+    background-color: darkgreen;
+}
+.password2_class_sign > input{
+    background-color: darkgreen;
+}
+

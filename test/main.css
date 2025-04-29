@@ -1,0 +1,29 @@
+.container_main{
+    margin: 0 auto;
+    width: 500px;
+    height: 800px;
+    background-color: darkgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.welcome{
+    width: 400px;
+    height: 100px;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    animation-name: welcomeani;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+.welcome > h1{
+    color: white;
+}
+@keyframes welcomeani{
+    0%{opacity: 0;}
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+}

@@ -1,0 +1,87 @@
+.container{
+    width: 500px;
+    height: 800px;
+    margin: 0 auto;
+    background-color: darkgreen;
+    padding: 20px;
+}
+.page-area{
+    width: 400px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+}
+.signup{
+    width: 200px;
+    height: 100px;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.login{
+    width: 200px;
+    height: 100px;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.title-area{
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.title-area > h1{
+    color:white;
+}
+.form-area{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    display: block;
+}
+.email_class{
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.email_class > input{
+    width: 400px;
+    height: 50px;
+}
+.password_class{
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.password_class > input{
+    width: 400px;
+    height: 50px;
+}
+.submit_class{
+    width: 400px;
+    height: 100px;
+}
+.submit_class > button{
+    width: 400px;
+    height: 100px;
+    background-color: aqua;
+    color: white;
+}
+.page-area a{
+    text-decoration: none;
+}
+.email_class > input{
+    background-color: darkgreen;
+}
+.password_class > input{
+    background-color: darkgreen;
+}
