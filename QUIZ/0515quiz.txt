@@ -1,0 +1,5 @@
+1. h1{
+   color: red;
+}
+2. console.log(str1+str2);
+3. <script>console.log('안녕히계세요'); -> <script src quiz.js">
