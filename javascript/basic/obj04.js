@@ -38,3 +38,21 @@ console.log(test);
 let number = "010-1234-5678";
 let s = number.split("-");
 console.log(s);
+console.log(s[2]);
+console.log(s[0]);
+
+//
+console.log('------------------------');
+let today = new Date();
+
+console.log(today);
+console.log(today.getFullYear());
+console.log(today.getMonth());     //0~11  + (1월~12월)
+console.log(today.getDate());      //일
+console.log(today.getDay());        //요일 0 ~ 6 (일~토)
+console.log(today.getHours());
+console.log(today.getMinutes());
+console.log(today.getSeconds());
+
+console.log(Math.abs(-10));     //절대값
+console.log(Math.round(123.56)); //반올림 sqrt
