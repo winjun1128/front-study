@@ -1,3 +1,4 @@
+//함수 선언
 //function 함수
 
 function func01(){
@@ -24,6 +25,7 @@ const func04 = ()=>{
 
 func04();
 
+//매개변수
 function func05(a,b){
     console.log(a+" "+b);
 }
@@ -45,3 +47,4 @@ const func08 = (x,y)=>{
     console.log(x+" "+y);
 }
 func08(90,100);
+

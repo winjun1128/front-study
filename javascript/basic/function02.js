@@ -52,9 +52,34 @@ if(true){
 // console.log(q);
 // let q = 30;      //let const
 
+
+//호이스팅: 변수나 함수의 선언이 없어도 알아서 위에 있다고 인식하고 처리
+//var만 호이스팅을 지원
+
 console.log(w);
 var w = 30;
 
 r = 3000;
 var r;
 console.log(r);
+
+check();
+function check(){
+    console.log('check');
+}
+
+// let name = "이름";
+// let name = "내이름";
+
+var r = 5000;        //이미 선언한 변수명인데, 다시 선언하면서 기존값 덮어쓰기
+console.log(r);
+
+function welcome(){
+    console.log("환영합니다~");
+    //
+    //
+}
+
+(function(){console.log('이것은 일회용 함수');
+
+})();
