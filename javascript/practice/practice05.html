@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    달식당 좋아요<span id="dal">♡</span><span id="dal_num"></span>
+    <script>
+        let clickcount=0;
+        document.getElementById('dal').addEventListener('click',()=>{
+            clickcount++;
+            document.getElementById('dal_num').textContent=clickcount;
+        });
+    </script>
+</body>
+</html>
