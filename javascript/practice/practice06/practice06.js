@@ -46,6 +46,8 @@ function changeLink(url){
 // https:// + open. + human.or.kr
 //http 로 접속 -> 경로 https 수정 -> https://human.or.kr
 // http://abc-mart.co.kr -> https://open.abc-mart.co.kr
+// HTTP (Hyper Text Transfer Protocol)
+// HTTPS (Hyper Text Transfer Protocol over Secure Socket Layer)
 
 // 출력결과가 알맞게 나오도록 코드를 추가하세요.
 
